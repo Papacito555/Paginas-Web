@@ -1,0 +1,52 @@
+<html lang="es-MX">
+<meta charset="UTF-8"/>
+
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Imprimiendo el área de un cuadrado con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+		
+			function impCuadrado(lado) {
+					//var i = 0;
+					for(var i = 0;i < lado; i++) {
+						document.write("*");
+						for(var j = 0; j < lado;j++) {
+							document.write("O");
+						}
+						document.write("*");
+						document.write("<br />");
+					}
+				}
+				
+			alert("Imprimiendo el área de un cuadrado usando JavaScript-->");
+
+				var restart = false;
+				var lado = 0.0;
+				var area = 0.0;
+				var rep = 1;
+
+			do {
+				lado = prompt("Escribe el lado del cuadrado", "");
+				area = (lado * lado);
+				
+				document.write(rep +"° cuadrado!");
+				document.write("<br />");
+				impCuadrado(lado);				
+				document.write("<br />");
+
+				alert("El area es " + area + "\n");
+
+
+				if(confirm("Desea volver a imprimir el área de un cuadrado?")) {
+					restart = true;
+					rep++;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+		</script>
+	</body>
+</html>

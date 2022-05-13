@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<tittle>EJERCICIO NUMERO 16</tittle>
+</head>
+<body>
+<h1><center>  Haz un programa que sirva para resolver ecuaciones de 2º 
+				grado del tipo ax2 + bx = 0..</p>
+<script>
+	var a,b,c,solucion1,solucion2;
+	do{
+		a=parseInt(prompt("a"));
+	    b=parseInt(prompt("b"));
+		c=parseInt(prompt("c"));
+		solucion1 =parseInt(((-1*-b) +(Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a));
+		solucion2 =parseInt(((-1*-b) -(Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a));
+		alert("solucion1"+solucion1);
+		alert("solucion2"+solucion2);
+	
+		op=parseInt(prompt("quiere seguir 1)si  2)no: "));
+		
+	}while(op==1)
+
+</script>
+</body>
+</html>

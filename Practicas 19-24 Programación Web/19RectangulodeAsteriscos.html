@@ -1,0 +1,52 @@
+<html lang="es-MX">
+<meta charset="UTF-8"/>
+
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Imprimiendo el área de un rectángulo con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+		
+			function impRectangulo(altura, base) {
+					//var i = 0;
+					for(var i = 0;i < altura; i++) {
+						for(var j = 0; j < base;j++) {
+							document.write("*");
+						}
+						document.write("<br />");
+					}
+				}
+				
+			alert("Imprimiendo el área de un rectángulo usando JavaScript-->");
+
+				var restart = false;
+				var base = 0;
+				var altura = 0;
+				var area = 0.0;
+				var rep = 1;
+
+			do {
+				base = prompt("Escribe la base del rectángulo", "");
+				altura = prompt("Escribe la altura del rectángulo","");
+				area = (base * altura);
+				
+				document.write(rep +"° rectángulo!");
+				document.write("<br />");
+				impRectangulo(altura, base);				
+				document.write("<br />");
+
+				alert("El area es " + area + "\n");
+
+
+				if(confirm("Desea volver a imprimir el área de un cuadrado?")) {
+					restart = true;
+					rep++;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+		</script>
+	</body>
+</html>

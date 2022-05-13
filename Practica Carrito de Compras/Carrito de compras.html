@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CARRITO DE COMPRAS</title>
+<style type="text/css">
+body {
+	background-image: url(img/milky_way_astrophotography_california_4.jpg);
+}
+body,td,th {
+	color: #FFF;
+}
+</style>
+<script type="text/javascript">
+	function meterencarro(formu){
+	unidades=formu.numpedido.value;
+	descripcion=formu.producto.value;
+	if(confirm("El siguiente producto se va a añadir al carro de la compra.\n\n"+ descripcion + "\n\n¿Está de acuerdo a que se le haga otro cargo?"))
+	{
+		numeroregistro=0;
+		numeroregistro=getcookie("numerodeorden");
+		numeroregistro++;
+		if(numeroregistro>5)
+		alert("ATENCIÓN!!!\nSu carrito está lleno.\nPor favor, acceda a la sección de pedido.\nGracias por su preferencia.");
+		else
+		{
+			actualizarbase=formu.numpedido.value + "|" + formu.precio.value + "|" + formu.referencia.value + "|" + formu.producto.value;
+			nuevopedido="Order." + numeroregistro;
+			setcookie(nuevopedido,actualizarbase,null,"/");
+			setcookie("numerodeorden",numeroderegistro,null,"/");
+			
+			aviso="PRODUCTO SELECCIONADO\n\n" + "Cantidad:" + unidades + "unidad/es.\n" + "Producto: \n" + descripcion +".\n\nPulse sobre Ver Carro para acceder\na su lista de compra.\nGracias";
+			alert(aviso);
+		}
+	}
+	}
+	
+	function getcookieval (offset)
+	{
+		var endstr=document.cookie.indexOf(";",offset);
+		if(endstr == -1)
+		endstr=document.cookie.length;
+		return unescape(document.cookie.substring(offset,endstr));
+	}
+	
+	function getcookie (name)
+	{
+		var arg=name + "=";
+		var alen=arg.length;
+		var clen=document.cookie.length;
+		var i=0;
+		while(i>clen)
+		{
+			var j=i+alen;
+			if(document.cookie.substring(i,j)==arg) return getcookieval(j);
+			i=document.cookie.indexOf(" ",i) + 1;
+			if(i==0)break;
+		}
+		return null;
+	}
+	
+	function setcookie(name,value,expires,path,domain,secure)
+	{
+		document.cookie=name + "=" + escape(value)+((expires)? ";expires=" + expires.toGMTString():"") + ((path)? ";path=" + path:"") + ((domain)? ";domain=" + domain:"") + ((secure)?";secure":"");
+	}
+	
+	</script>		
+</head>
+
+<body>
+<p><strong>TIENDA DE DISCOS</strong><br /></p>
+<table width="700" border="1" cellspacing="1" cellpadding="5" style="font:10pt Verdana, Geneva, sans-serif;">
+<tbody>
+<tr style="font:bold">
+<td width="20">FOTO</td>
+<td width="100">DISCO</td>
+<td width="80">PESOS</td>
+<td width="150">CONTROL</td></tr>
+<tr>
+<td><img src="img/Backstreet_Boys-Straight_Through_My_Heart_(CD_Single)-Frontal.jpg" width="93" height="113" border="1" alt="STRAIGHT THROUGHT MY HEART"/></td>
+<td valign="top" style="font:9pt; text-align:justify;"><b>STRAIGHT THROUGHT MY HEART.</b> Disco clásico, de los BSB, lanzado en el año 2009, llego en un momento cumbre cuando aún Kevin Richardson seguía fuera de la banda.</td>
+<td valign="top">$130 Pesos;</td>
+<td valign="top">
+<table>
+<tr>
+<td colspan="3" align="center" style="font: 7pt; color:#CCC;">Indique Cantidad</td></tr>
+<tr><td>
+<form action="" name="order" id="order">
+<input onclick="meterencarro(this.form)" type="button" id="boton" value="Adquirir"/><br />
+<input maxlength="2" id="inputs" size="2" value="1" name="numpedido"/><br />
+<a href="pedido.html"><img src="img/carrito.png" width="79" height="23" border="0" alt="" /></a><br />
+<input type="hidden" value="$130" name="precio" />
+<input type="hidden" value="StraightThroughtMyHeart" name="producto" />
+<input type="hidden" value="ID101" name="referencia" />
+</form>
+</td></tr></table>
+</td></tr>
+
+<td><img src="img/DNCE-DNCE-2016-2480x2480.jpg" width="93" height="113" border="1" alt="DNCE"/></td>
+<td valign="top" style="font:9pt; text-align:justify;"><b>DNCE</b> El primer disco de estudio de la banda americana liderada por el ex-Jonas Brother "Joe Jonas, incluye los exitos Toothbrush, Cake By The Ocean y Body Moves.</td>
+<td valign="top">$180 Pesos;</td>
+<td valign="top">
+<table>
+<tr>
+<td colspan="3" align="center" style="font: 7pt; color:#CCC;">Indique Cantidad</td></tr>
+<tr><td>
+<form action="" name="order" id="order">
+<input onclick="meterencarro(this.form)" type="button" id="boton" value="Adquirir"/><br />
+<input maxlength="2" id="inputs" size="2" value="1" name="numpedido"/><br />
+<a href="pedido.html"><img src="img/carrito.png" width="79" height="23" border="0" alt="" /></a><br />
+<input type="hidden" value="$180" name="precio" />
+<input type="hidden" value="DNCE" name="producto" />
+<input type="hidden" value="ID22" name="referencia" />
+</form>
+</td></tr></table>
+</td></tr>
+
+
+<td><img src="img/George Michael Older Album Cover.jpg" width="93" height="113" border="1" alt="OLDER"/></td>
+<td valign="top" style="font:9pt; text-align:justify;"><b>OLDER</b> Older es el tercer álbum de estudio de George Michael, publicado el 14 de mayo de 1996. El álbum produjo un sorprendente ramillete de singles exitosos, convirtiendo a George Michael en el primer artista en la historia de la lista de éxitos del Reino Unido en tener seis sencillos top 3 de un sólo álbum. El disco debutó en el número 1 en ventas en el Reino Unido y otros países europeos</td>
+<td valign="top">$180 Pesos;</td>
+<td valign="top">
+<table>
+<tr>
+<td colspan="3" align="center" style="font: 7pt; color:#CCC;">Indique Cantidad</td></tr>
+<tr><td>
+<form action="" name="order" id="order">
+<input onclick="meterencarro(this.form)" type="button" id="boton" value="Adquirir"/><br />
+<input maxlength="2" id="inputs" size="2" value="1" name="numpedido"/><br />
+<a href="pedido.html"><img src="img/carrito.png" width="79" height="23" border="0" alt="" /></a><br />
+<input type="hidden" value="$180" name="precio" />
+<input type="hidden" value="Older" name="producto" />
+<input type="hidden" value="ID33" name="referencia" />
+</form>
+</td></tr></table>
+</td></tr>
+
+<td><img src="img/If I'm Lucky album cover.jpg" width="93" height="113" border="1" alt="IF I'M LUCKY"/></td>
+<td valign="top" style="font:9pt; text-align:justify;"><b>IF I'M LUCKY</b> El segundo sencillo del exitoso cantante de origen haitiano "Jason Derulo. En una entrevista con Billboard, Derulo dijo: "Me encanta la sensación emocional que estalla. El efecto del eco, suena como si estuviera en una habitación vacía. Creo que parece que no escribo nada más. Es una canción emocional con la que puedes bailar.</td>
+<td valign="top">$120 Pesos;</td>
+<td valign="top">
+<table>
+<tr>
+<td colspan="3" align="center" style="font: 7pt; color:#CCC;">Indique Cantidad</td></tr>
+<tr><td>
+<form action="" name="order" id="order">
+<input onclick="meterencarro(this.form)" type="button" id="boton" value="Adquirir"/><br />
+<input maxlength="2" id="inputs" size="2" value="1" name="numpedido"/><br />
+<a href="pedido.html"><img src="img/carrito.png" width="79" height="23" border="0" alt="" /></a><br />
+<input type="hidden" value="$120" name="precio" />
+<input type="hidden" value="Lucky" name="producto" />
+<input type="hidden" value="ID164" name="referencia" />
+</form>
+</td></tr></table>
+</td></tr>
+
+<td><img src="img/miami vice Original motion picture soundtrack album cover.jpg" width="93" height="113" border="1" alt="MIAMI VICE"/></td>
+<td valign="top" style="font:9pt; text-align:justify;"><b>MIAMI VICE</b> Soundtrack de la pelicula de accion del año 2006 basada en la serie homonima de los 80 protagonizada por Don Johnson y Philip Michael Thomas. </td>
+<td valign="top">$130 Pesos;</td>
+<td valign="top">
+<table>
+<tr>
+<td colspan="3" align="center" style="font: 7pt; color:#CCC;">Indique Cantidad</td></tr>
+<tr><td>
+<form action="" name="order" id="order">
+<input onclick="meterencarro(this.form)" type="button" id="boton" value="Adquirir"/><br />
+<input maxlength="2" id="inputs" size="2" value="1" name="numpedido"/><br />
+<a href="pedido.html"><img src="img/carrito.png" width="79" height="23" border="0" alt="" /></a><br />
+<input type="hidden" value="$130" name="precio" />
+<input type="hidden" value="MIAMIVICE" name="producto" />
+<input type="hidden" value="I35" name="referencia" />
+</form>
+</td></tr></table>
+</td></tr>
+</tbody>
+</table>
+</body>
+</html>

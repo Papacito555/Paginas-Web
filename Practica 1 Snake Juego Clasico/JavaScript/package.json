@@ -1,0 +1,20 @@
+{
+	"name": "Me Caga",
+	"version": "0.0.4-4",
+	"dependencies": {
+		"express": "3.3.5",
+		"jade": "0.34.1",
+		"consolidate": "0.9.1",
+		"socket.io": "0.9.16",
+		"swig": "1.0.0-pre2"
+	},
+	"description": "Ya estoy hasta la madre!!!",
+	"subdomain": "pija",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"engines": {
+		"node": "0.8.x"
+	}
+}
+

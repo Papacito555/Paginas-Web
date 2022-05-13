@@ -1,0 +1,42 @@
+<html lang="es-MX">
+<meta charset="UTF-8">
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Imprimiendo la Tabla de Multiplicar de un Número con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+		
+			function tMultiplicar(num) {
+					document.write("Tabla de Multiplicar del " + num);
+					document.write("<br />");
+					for(var i = 1;i <= 10; i++) {
+						var resultado = 0;
+						resultado = num * i;
+						document.write(resultado);
+						document.write("<br />");
+					}
+				}
+				
+			alert("Imprimiendo La Tabla de Multiplicar de un Número usando JavaScript-->");
+
+				var restart = false;
+				var numero = 0.0;
+				var rep = 1;
+
+			do {
+				numero = prompt("Escribe la tabla que deseas visualizar", "");
+				tMultiplicar(numero);				
+				document.write("<br />");
+
+				if(confirm("Desea imprimir una tabla nuevamente?")) {
+					restart = true;
+					rep++;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+		</script>
+	</body>
+</html>

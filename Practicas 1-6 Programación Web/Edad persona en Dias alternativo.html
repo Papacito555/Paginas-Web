@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/estilos.css">
+	<style type="text/css">
+	body,td,th {
+	font-family: Roboto;
+	color: #FFFFFF;
+}
+body {
+	background-image: url(img/miami-beach-nightlife__large.jpg);
+	background-repeat: repeat;
+}
+    #apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	left: 329px;
+	top: 21px;
+}
+    #apDiv3 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 474px;
+	top: 257px;
+}
+    #apDiv4 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 3;
+	left: 478px;
+	top: 433px;
+}
+    #apDiv5 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 4;
+	left: 480px;
+	top: 567px;
+}
+    #apDiv6 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 5;
+	left: 482px;
+	top: 707px;
+}
+    </style>
+	<title>Edad persona en Días</title>
+</head>
+<body>
+<div id="apDiv2"><img src="img/Programa que pregunta nombre y edad.png" width="502" height="220"></div>
+<div align="center">
+       <form action="">
+         <div id="apDiv3">
+         <h1 align="center"></h1>
+         <br>
+          <label for="nom"> Nombre: </label>
+           <a><input type="text" id="nom"> </a>
+         </div>
+          <div id="apDiv4">
+            <label for="ape">  Apellido  </label>
+              <a><input type="text" id="ape"> </a>
+         </div>
+           <div id="apDiv5">
+             <label for="pob"> Edad:</label>
+               <a><input type="text" id="edad"> </a>
+         </div>
+          <div id="apDiv6">
+          <input type="button" value="Mostrar" onclick="datos()"/>
+         </div>
+  </form>
+</div>
+</div></div>
+<script type="text/javascript">
+	function datos(){
+       var nombre = document.getElementById('nom').value;  
+       var Apellido=document.getElementById('ape').value;
+        var edad=document.getElementById('edad').value;
+   alert("Hola "+nombre+" "+Apellido+"\n"+"Tu Edad en Días es: "+edad*365+"\n"+"Tu Edad en Meses es: "+edad*12);
+       }
+</script>
+</body>
+</html>

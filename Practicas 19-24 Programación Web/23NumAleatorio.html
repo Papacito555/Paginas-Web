@@ -1,0 +1,44 @@
+<html lang="es-MX">
+<meta charset="UTF-8">
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Imprimiendo la Tabla de Multiplicar de un Número con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+		
+			function numAleatorio(num) {
+					for(var i = 1;i <= num; i++) {
+						var resultado = 0;
+						resultado = Math.floor(Math.random()*5+1);
+						document.write(resultado);
+						i != 50? document.write(", ") : document.write(".");
+
+					}
+				}
+				
+			alert("Imprimiendo una lista de 50 números enteros aleatorios dentro del rango 1-6 usando JavaScript");
+
+				var restart = false;
+				var numero = 0;
+				var rep = 1;
+
+			do {
+				numero = 50
+				document.write("Corrida número: " + rep + ".");
+				document.write("<br />");
+
+				numAleatorio(numero);				
+				document.write("<br />");
+
+				if(confirm("Desea imprimir una tabla nuevamente?")) {
+					restart = true;
+					rep++;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+		</script>
+	</body>
+</html>

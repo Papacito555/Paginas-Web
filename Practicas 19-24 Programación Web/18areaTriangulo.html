@@ -1,0 +1,33 @@
+<html lang="es-MX">
+<meta charset="UTF-8"/>
+
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Calculando el área de un triángulo con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+			alert("Calculadora del área de un triangulo usando JavaScript-->");
+
+				var restart = false;
+				var base = 0;
+				var altura = 0;
+				var area = 0.0;
+
+			do {
+				base = prompt("Escribe la base del triángulo", "");
+				altura = prompt("Escribe la altura del triángulo","");
+				area = (base * altura) / 2;
+				alert("El area es " + area + "\n");
+
+
+				if(confirm("Desea volver a calcular el área de un triangulo?")) {
+					restart = true;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <title>Ejercicio 7</title>
+   </head>
+   <body>
+      <div align="center">
+       <form action="">
+         <div>
+         <h1 align="center">Ejercicio 7</h1><br>
+          <label for="nom"> Nombre: </label>
+           <a><input type="text" id="nom"> </a>
+           </div>
+          <div>
+              <label for="ape">  Apellido  </label>
+              <a><input type="text" id="ape"> </a>
+          </div>
+           <div>
+               <label for="pob"> Poblacion:</label>
+               <a><input type="text" id="pob"> </a>
+           </div>
+          <div>
+          <input type="button" value="Mostrar" onclick="Mostrar1()"/>
+           </div>
+       </form>
+       </div>
+       
+       <script language="javascript">
+    function Mostrar1(){
+       var nombre = document.getElementById('nom').value;  
+       var Apellido=document.getElementById('ape').value;
+        var pob=document.getElementById('pob').value;
+   alert("Hola "+nombre+" "+Apellido+"\n"+"Adios habitante de la poblacion "+pob);
+       }
+       </script>
+   </body>
+    
+</html>

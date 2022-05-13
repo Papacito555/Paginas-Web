@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/estilos.css">
+	<style type="text/css">
+	body,td,th {
+	font-family: Roboto;
+	color: #FFFFFF;
+}
+body {
+	background-image: url(img/Miami-beach-wallpaper-widescreen-915x515.jpg);
+	background-repeat: repeat;
+}
+    #apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+}
+    #apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	left: 329px;
+	top: 21px;
+}
+    </style>
+	<title>Edad persona en Días</title>
+</head>
+<body>
+<div id="apDiv2"><img src="img/Programa que pregunta nombre y edad.png" width="502" height="220"></div>
+<script type="text/javascript">
+	var nombre=prompt('Ingrese sus nombres');
+	var Apellido=prompt('Ingrese su Apellidos');
+	var edad=prompt('Ingrese su edad');
+	alert("Hola "+nombre + " "+Apellido+" "+ "Tu edad en días es= "+ edad*365);
+</script>
+</body>
+</html>

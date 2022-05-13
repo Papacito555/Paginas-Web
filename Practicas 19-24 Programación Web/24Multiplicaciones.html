@@ -1,0 +1,56 @@
+<html lang="es-MX">
+<meta charset="UTF-8">
+	<head>
+		<title>Usando JavaScript!!</title>
+		<h1>Imprimiendo multiplicaciones aleatorias para que el usuario las conteste con JavaScript!</h1>
+	</head>
+	<body>
+		<script>
+		
+			function Multiplicar(num1, num2) {
+				var resultado = num1 * num2;
+				return resultado
+			}
+			function numAleatorio() {
+				var aleatorio = Math.floor(Math.random()*9+1);
+				return aleatorio;
+			}				
+
+			var restart = false;
+			var num1 = 0; var num2 = 0; var puntaje;
+			var respuesta = 0; var resMult = 0;
+			var rep = 1;
+
+			do {
+				puntaje = 0;
+				for(var i = 0; i < 10; i++) {
+					num1 = numAleatorio();
+					num2 = numAleatorio();
+					resMult = Multiplicar(num1, num2);
+					respuesta = prompt("Cuanto es: " + num1 + " * " + num2);
+					if (respuesta == resMult) puntaje++;
+				}
+				alert("Tu puntaje es de: " + puntaje);
+				if(confirm("Desea jugar nuevamente?")) {
+					restart = true;
+					rep++;
+				}
+				else {
+					restart = false;
+				}
+			} while(restart == true);
+			
+			document.write("Tu Puntaje es de: " + puntaje);
+			document.write("<br />");
+			if(puntaje < 11 && puntaje > 8) {
+				document.write("Felicidades!!!<br /> Contínua así!");
+			}
+			else if (puntaje > 5 && 9 < puntaje) {
+				document.write("Bien, continua practicando!!!"); 
+			}
+			else {
+				document.write("Debes practicar mucho!!!");
+			}
+		</script>
+	</body>
+</html>

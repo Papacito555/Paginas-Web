@@ -1,0 +1,126 @@
+_____________________________________________
+
+ SNAKE CLASSIC GAME BY EDUARDO ESPINOSA 2NM40
+_____________________________________________
+
+
+ReadMe.txt
+
+V1.00
+
+Gracias por jugar SNAKE CLASSIC GAME BY EDUARDO ESPINOSA 2NM40
+
+Este archivo Readme (Léeme) contiene información de última hora y consejos para resolver problemas.
+
+__________
+
+ ÍNDICE
+__________
+
+
+	1) NAVEGADORES OPTIMOS PARA JUGAR
+
+	2) CONTROLES
+
+	3) REPRODUCTOR DE MUSICA
+
+	4) PREGUNTAS COMUNES SOBRE LA ELABORACIÓN
+
+	5) INFORMACIÓN DE CONTACTO
+
+	6) AGRADECIMIENTOS
+
+________________________________________________________________________
+
+
+1) NAVEGADORES OPTIMOS PARA JUGAR
+_________________________________
+*GOOGLE CHROME
+*MICROSOFT EDGE
+*MOZILLA FIREFOX
+
+__________________________________________________________________________
+
+2) CONTROLES PARA JUGAR
+____________________________
+
+EN LA SECCIÓN NUMERICA DEL LADO DERECHO DEL TECLADO UTILIZAR:
+
+1====> Mover a la Izquierda
+2====> Mover hacia Abajo
+3====> Mover a la Derecha
+5====> Mover hacia Arriba
+
+____________________________________________________________________________
+
+3)REPRODUCTOR DE MUSICA
+_________________________
+
+Archivos de canciones del usuario
+
+SNAKE permite la reproducción de archivos de sonido del usuario. Por defecto, el juego es compatible con los archivos de sonido de Windows (WAV) y el formato Ogg Vorbis (OGG). Además, si tienes instalados en tu equipo los CÓDECS adecuados, podrás reproducir MP3, WMA, M4A, etc. Para que sea más sencilla la reproducción de estos formatos puedes: 
+
+		Instalar la última versión de Apple QuickTime Player. 
+			o
+		Instalar la última versión de Microsoft Windows player. 
+			o
+		Instalar un paquete de varios CODEC.
+			o
+		Instalar la ultima versión de Adobe Flash, para que se pueda reproducir en la Web.
+
+En el código fuente del juego:
+<audio src=(Ingresar el nombre de la cancion a su gusto, de preferencia guardarlo en la carpeta sound)  autoplay loop></audio>
+
+____________________________________________________________________________________
+
+
+4) PREGUNTAS COMUNES
+_____________________
+
+
+
+P: ¿Por qué tengo problemas al configurar 2 mandos al mismo tiempo?
+R: SNAKE solo puede funcionar con el teclado.
+
+
+P: ¿Por qué las texturas desparecen o centellean en el modo de gráficos de 16 bits?
+A: SNAKE está diseñado, específicamente, para modos de pantalla de 32 bits. Aunque se puede jugar en modos de 16 bits, la experiencia de juego será mucho peor y el desarrollo puede no ser el previsto.
+
+
+
+P: No tengo tarjeta de sonido en mi PC (o no tengo los controladores para la tarjeta). ¿Puede ejecutar SNAKE?
+R: SNAKE necesita una tarjeta de sonido y no se funconará si no la hay.
+
+
+P: No quiero actualizar mi sistema optimizado con DirectX 8.1 a DirectX 9. ¿Puedo jugar a SNAKE sin DirectX 9?
+R: SNAKE necesita que DirectX 9 esté instalado.
+p: Tengo un navegador opsoleto, ¿puedo jugar SNAKE en ese navegador?
+R: No puedes jugarlo en ese navegador, necesitaras uno actualizado para poder jugar, de lo contrario no cargará la pa´gina web.
+
+_________________________________________________________________________________________________
+
+5)CONTACTO
+__________________________
+
+ATENCIÓN AL CLIENTE
+
+Si tienes algún problema con este juego, puedes ponerte en contacto con nuestro soporte técnico:
+
+
+Por correo electrónico: directorloquenderoxd@gmail.com
+Enviando una carta, indicando tu problema.
+
+
+
+Únicamente se resolverán dudas de carácter técnico, de bugs o se indicará cómo proceder cuando se trate de algun defecto con el código. En ningún caso se facilitarán trucos o guías del juego. 
+
+____________________________________________________________________________________________________
+
+6)AGRADECIMIENTOS
+_____________________
+
+A mi familia y amigos
+
+__________________________________________
+
+
